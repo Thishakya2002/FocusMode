@@ -1,7 +1,7 @@
 import {SettingContext, SettingProvider} from "./context/SettingsContext"
 import SetPomodoro from "./component/SetPomodoro";
 import CountdownAnimation from './component/CountdownAnimation'
-import { Children, useCallback, useContext, useEffect } from "react";
+import { children, _callbackCallback, useContext, useEffect } from "react";
 import Button from "./component/Button";
 
 function App() {
@@ -17,6 +17,10 @@ function App() {
     pauseTimer,
     updateExecute
   } = useContext(SettingContext)
+
+  useEffect(() => {
+    console.log("Pomodoro value updated : ",pomodoro);
+  },[pomodoro]);
 
   useEffect(() => updateExecute(executing),[executing, startAnimate])
 

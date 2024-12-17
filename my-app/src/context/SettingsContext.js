@@ -18,22 +18,22 @@ function SettingContextProvider (props) {
 
     }
     function startTimer(){
-        setStartAnimate(true)
+        setStartAnimate(true);
     }
     function pauseTimer(){
-        setStartAnimate(false)
+        setStartAnimate(false);
     }
     function stopTimer(){
-        setStartAnimate(false)
+        setStartAnimate(false);
     }
 
     //pass time
     const children = ({remainingTime}) => {
-    const minutes = Math.floor(remainingTime / 60)
-    const seconds = remainingTime % 60
+        const minutes = Math.floor(remainingTime / 60)
+        const seconds = remainingTime % 60
     
-    return '${minutes}:${seconds}'
-    }
+        return `${minutes}:${seconds}`;
+    };
     
     const SettingBtn = () =>{
         setExecting({})
