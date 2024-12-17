@@ -59,7 +59,7 @@ const SetPomodoro = () => {
                         onChange={handleChange} value={newTimer.short}/>
                     <input className="input" name="longBreak" onChange={handleChange} value={newTimer.long}/>
                 </div>
-                <Button type = "submit">Set Timer</Button>
+                <Button type = "submit" title="Set Timer"/>
             </form>
         </div>
     )
